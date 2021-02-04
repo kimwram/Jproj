@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+    <head lang="ko">
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="stylesheet" th:href="@{/css/bootstrap.css}" />
+        <link rel="stylesheet" th:href="@{/css/register.css}" />
+        <script type = text/javascript th:src="@{/js/bootstrap.js}"></script>
+    </head>
+
+    <title>Login</title>
+
+    <body>
+        <div class="wrap">
+            <div class="form-wrap">
+                <div class="button-wrap">
+                    <div id="btn"></div>
+                    <button type="button" class="togglebtn" th:onclick="'location.href=\''+@{login}+'\''">LOGIN</button>
+                    <button type="button" class="togglebtn" th:onclick="'location.href=\''+@{register}+'\''">REGISTER</button>
+                </div>
+
+                <form id="register" th:action="@{/account/register}" class="input-group" method="POST">
+                    <input type="email" name="username" class="input-field" placeholder="Email" required />
+                    <!-- <input type="text" name="username" class="input-field" placeholder="Nick name" required /> -->
+                    <input type="password" name="password" class="input-field" placeholder="Password" required />
+                    <button class="submit">Register</button>
+                </form>
+            </div>
+        </div>
+    </body>
+</html>

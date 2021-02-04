@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head th:replace="fragments/base :: head(upload)" lang="ko">
+    <link rel="stylesheet" href="../static/css/bootstrap5.css">
+
+</head>
+
+<body class="bg-light">
+
+    <div class="container">
+        <main>
+            <div class="py-5 text-center">
+                <img class="d-block mx-auto mb-4" th:src="@{/img/icon-lion.png}" alt="" width="100" height="100">
+                <h2>작품전시</h2>
+                <p class="lead">최고의 작품을 세상에 보여주고 자신을 표현해 보세요.</p>
+            </div>
+            <form method="POST" th:action="@{/upload}" enctype="multipart/form-data">
+                <p><div class="row g-3">
+                    <h4 class="mb-3"></h4>
+                    <div class="col-12">
+                        <label for="title" class="form-label">작품명 <span class="text-muted">(Gallery)</span></label>
+                        <input type="text" class="form-control" id="title" placeholder="작품의 제목을 입력하세요.">
+                    </div>
+                </div>
+                </p>
+                <p><div class="col-12">
+                    <label for="text" class="form-label">설명</label>
+                    <input type="text"class="form-control" id="text" placeholder="작품을 설명해 주세요." required>
+                </div>
+                </p>
+                <p><h6>파일 업로드</h6>
+                <div class="input-group mb-3">
+                    <input type="file" value="파일선택" name="file" class="form-control" id="inputGroupFile02">
+                </div>
+                </p>
+                <button type="submit" value="업로드" class="btn btn-secondary" style="float: right;">업로드</button>
+            </form>
+        </main>
+    </div>
+</body>
+
+</html>

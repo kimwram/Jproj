@@ -1,0 +1,19 @@
+:root {
+    /* color */
+    --text-grey: #616161;
+    --text-white: white;
+    --text-black: black;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url(../img/icon-watercolor.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-top: 10px;
+    text-decoration: none;
+    color: var(--text-black);
+}
